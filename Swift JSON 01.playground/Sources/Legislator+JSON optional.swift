@@ -8,15 +8,13 @@ public extension Legislator {
         
         guard let firstName = json["first_name"] as? String,
             let inOffice = json["in_office"] as? Bool,
-            let lastName = json["last_name"] as? String,
-            let state = json["state"] as? String
+            let lastName = json["last_name"] as? String
         else {
             return nil
         }
         self.firstName = firstName
         self.inOffice = inOffice
         self.lastName = lastName
-        self.state = state
         
         
         // 2 - required two-step parameter

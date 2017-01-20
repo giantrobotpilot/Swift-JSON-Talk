@@ -13,6 +13,7 @@ open class SunlightWebService {
         let session = URLSession(configuration: .default)
         if let url = urlComponents?.url {
             session.dataTask(with: url, completionHandler: { (data, response, error) in
+                print("\n")
                 do {
                     if let data = data,
                         let jsonObject = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? NSDictionary,

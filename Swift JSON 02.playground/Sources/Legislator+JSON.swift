@@ -10,7 +10,6 @@ extension Legislator {
         self.firstName = try jsonDict.extractString(forKey: "first_name")
         self.inOffice = try jsonDict.extractBool(forKey: "in_office")
         self.lastName = try jsonDict.extractString(forKey: "last_name")
-        self.state = try jsonDict.extractString(forKey: "state")
         
         
         // 2 - required two-step parameter

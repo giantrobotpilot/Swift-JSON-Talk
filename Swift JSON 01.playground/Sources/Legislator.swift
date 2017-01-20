@@ -19,7 +19,6 @@ public struct Legislator: CustomStringConvertible {
     public let inOffice: Bool
     public let lastName: String
     public let party: Party
-    public let state: String
     public let website: URL?
     
     public var description: String {

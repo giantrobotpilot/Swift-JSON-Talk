@@ -26,11 +26,6 @@ extension Legislator {
         }
         self.lastName = lastName
         
-        guard let state = jsonDict["state"] as? String else {
-            throw SerializationError.missing("state")
-        }
-        self.state = state
-        
         
         // 2 - required two-step parameter
         
