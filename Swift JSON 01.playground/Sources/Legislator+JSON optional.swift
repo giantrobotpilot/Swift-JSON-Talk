@@ -46,8 +46,8 @@ public extension Legislator {
         
         // 4 - optional two-step parameter
         
-        if let websiteString = json["website"] as? String,
-            let url = URL(string: websiteString) {
+        if let urlString = json["website"] as? String,
+            let url = URL(string: urlString) {
             self.website = url
         }
         else {

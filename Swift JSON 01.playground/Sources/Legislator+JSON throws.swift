@@ -48,12 +48,18 @@ extension Legislator {
         
         // 3 - optional JSON object parameter
         
-        if let district = jsonDict["district"] as? Int {
-            self.district = district
+//        if let district = jsonDict["district"] as? Int {
+//            self.district = district
+//        }
+//        else {
+//            self.district = nil
+//        }
+        
+        // TEST DISTRICT AS REQUIRED PARAM
+        guard let district = jsonDict["district"] as? Int else {
+            throw SerializationError.missing("district")
         }
-        else {
-            self.district = nil
-        }
+        self.district = district
         
         
         // 4 - optional two-step parameter
